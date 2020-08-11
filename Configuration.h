@@ -668,7 +668,7 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop. BECAUSE SENSORLESS HOMING WOULDNT WORK left orig endstops
 #define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop. BECAUSE SENSORLESS HOMING WOULDNT WORK left orig endstops
-#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop. // TODO: set back to false when bltouch is enabled
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -851,7 +851,7 @@
 //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
-#define USE_PROBE_FOR_Z_HOMING
+//#define USE_PROBE_FOR_Z_HOMING //TODO: Enable once bltouch is printed&mounted 
 
 /**
  * Z_MIN_PROBE_PIN
@@ -869,7 +869,7 @@
  *      - normally-open switches to 5V and D32.
  *
  */
-#define Z_MIN_PROBE_PIN P0_10 // Pin 32 is the RAMPS default
+//#define Z_MIN_PROBE_PIN P0_10 // Pin 32 is the RAMPS default //TODO: Enable once bltouch is printed&mounted 
 
 /**
  * Probe Type
@@ -907,8 +907,8 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-#define BLTOUCH
-#define BLTOUCH_SET_5V_MODE //ADDED BY ME BY RECOMMENDATION AND CHECK LATER
+//#define BLTOUCH //TODO: Enable once bltouch is printed&mounted 
+//#define BLTOUCH_SET_5V_MODE //ADDED BY ME BY RECOMMENDATION AND CHECK LATER //TODO: Enable once bltouch is printed&mounted 
 
 /**
  * Touch-MI Probe by hotends.fr
@@ -1229,14 +1229,14 @@
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
-#define AUTO_BED_LEVELING_UBL
+//#define AUTO_BED_LEVELING_UBL //TODO: Enable once bltouch is printed&mounted 
 //#define MESH_BED_LEVELING
 
 /**
  * Normally G28 leaves leveling disabled on completion. Enable
  * this option to have G28 restore the prior leveling state.
  */
-#define RESTORE_LEVELING_AFTER_G28
+//#define RESTORE_LEVELING_AFTER_G28 //TODO: Enable once bltouch is printed&mounted 
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
@@ -1379,7 +1379,7 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing when homing all axes (G28).
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-#define Z_SAFE_HOMING
+//#define Z_SAFE_HOMING //TODO: Enable once bltouch is printed&mounted 
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing when homing all axes (G28).
@@ -1497,7 +1497,7 @@
 
 // Preheat Constants
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 190
+#define PREHEAT_1_TEMP_HOTEND 215
 #define PREHEAT_1_TEMP_BED     70
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
