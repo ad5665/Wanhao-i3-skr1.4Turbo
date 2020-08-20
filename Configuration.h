@@ -497,9 +497,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   //Wanhao i3 SKR1.4
-  #define DEFAULT_Kp 23.82 //Found after my auto PID tune via Octaprint
-  #define DEFAULT_Ki 1.61 //Found after my auto PID tune via Octaprint
-  #define DEFAULT_Kd 87.93 //Found after my auto PID tune via Octaprint
+  #define DEFAULT_Kp 28.93 //Found after my auto PID tune via Octaprint
+  #define DEFAULT_Ki 1.72 //Found after my auto PID tune via Octaprint
+  #define DEFAULT_Kd 121.57 //Found after my auto PID tune via Octaprint
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
