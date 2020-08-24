@@ -497,9 +497,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   //Wanhao i3 SKR1.4
-  #define DEFAULT_Kp 28.93 //Found after my auto PID tune via Octaprint
-  #define DEFAULT_Ki 1.72 //Found after my auto PID tune via Octaprint
-  #define DEFAULT_Kd 121.57 //Found after my auto PID tune via Octaprint
+  #define DEFAULT_Kp 26.89 //Found after my auto PID tune via Octaprint
+  #define DEFAULT_Ki 1.63 //Found after my auto PID tune via Octaprint
+  #define DEFAULT_Kd 110.90 //Found after my auto PID tune via Octaprint
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
@@ -668,7 +668,7 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop. BECAUSE SENSORLESS HOMING WOULDNT WORK left orig endstops
 #define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop. BECAUSE SENSORLESS HOMING WOULDNT WORK left orig endstops
-#define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop. // TODO: set back to false when bltouch is enabled
+#define Z_MIN_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop. // TODO: set back to false when bltouch is enabled
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
