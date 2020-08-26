@@ -71,7 +71,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Adam Coleman, Wanhao i3 aka Maker Select V2 config for SKR 1.4 non-turbo/TMC2209/BLTouch3.X/StockLCD)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Adam Charlton, Wanhao i3 v2.1 for SKR 1.4 turbo/TMC2209/BLTouch3.X/StockLCD)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -668,11 +668,11 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop. BECAUSE SENSORLESS HOMING WOULDNT WORK left orig endstops
 #define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop. BECAUSE SENSORLESS HOMING WOULDNT WORK left orig endstops
-#define Z_MIN_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop. // TODO: set back to false when bltouch is enabled
+#define Z_MIN_ENDSTOP_INVERTING false  // Set to true to invert the logic of the endstop. // TODO: set back to false when bltouch is enabled
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING false // Set to true to invert the logic of the probe.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true // Set to true to invert the logic of the probe.
 
 /**
  * Stepper Drivers
@@ -851,7 +851,7 @@
 //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
-//#define USE_PROBE_FOR_Z_HOMING //TODO: Enable once bltouch is printed&mounted 
+#define USE_PROBE_FOR_Z_HOMING
 
 /**
  * Z_MIN_PROBE_PIN
@@ -869,7 +869,7 @@
  *      - normally-open switches to 5V and D32.
  *
  */
-//#define Z_MIN_PROBE_PIN P0_10 // Pin 32 is the RAMPS default //TODO: Enable once bltouch is printed&mounted 
+#define Z_MIN_PROBE_PIN P0_10 // Pin 32 is the RAMPS default //TODO: Enable once bltouch is printed&mounted 
 
 /**
  * Probe Type
@@ -907,8 +907,8 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-//#define BLTOUCH //TODO: Enable once bltouch is printed&mounted 
-//#define BLTOUCH_SET_5V_MODE //ADDED BY ME BY RECOMMENDATION AND CHECK LATER //TODO: Enable once bltouch is printed&mounted 
+#define BLTOUCH //TODO: Enable once bltouch is printed&mounted 
+#define BLTOUCH_SET_5V_MODE //ADDED BY ME BY RECOMMENDATION AND CHECK LATER //TODO: Enable once bltouch is printed&mounted 
 
 /**
  * Touch-MI Probe by hotends.fr
@@ -980,7 +980,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 42, -40, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 39, -46, -1.20 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1141,7 +1141,7 @@
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
   #define MIN_SOFTWARE_ENDSTOP_X
   #define MIN_SOFTWARE_ENDSTOP_Y
-  #define MIN_SOFTWARE_ENDSTOP_Z
+  //#define MIN_SOFTWARE_ENDSTOP_Z
 #endif
 
 // Max software endstops constrain movement within maximum coordinate bounds
@@ -1228,7 +1228,7 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR
+#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL //TODO: Enable once bltouch is printed&mounted 
 //#define MESH_BED_LEVELING
 
@@ -1236,7 +1236,7 @@
  * Normally G28 leaves leveling disabled on completion. Enable
  * this option to have G28 restore the prior leveling state.
  */
-//#define RESTORE_LEVELING_AFTER_G28 //TODO: Enable once bltouch is printed&mounted 
+#define RESTORE_LEVELING_AFTER_G28 //TODO: Enable once bltouch is printed&mounted 
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
@@ -1335,7 +1335,7 @@
  * Add a bed leveling sub-menu for ABL or MBL.
  * Include a guided procedure if manual probing is enabled.
  */
-//#define LCD_BED_LEVELING //TODO: enable with bltouch
+#define LCD_BED_LEVELING //TODO: enable with bltouch
 
 #if ENABLED(LCD_BED_LEVELING)
   #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
@@ -1379,7 +1379,7 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing when homing all axes (G28).
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-//#define Z_SAFE_HOMING //TODO: Enable once bltouch is printed&mounted 
+#define Z_SAFE_HOMING //TODO: Enable once bltouch is printed&mounted 
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing when homing all axes (G28).
